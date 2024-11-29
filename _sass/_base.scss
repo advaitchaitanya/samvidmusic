@@ -6,9 +6,6 @@
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  background-color: #433a35;
-  color: #fff;
-  font-family: var(--font-family-primary);
   line-height: 1.25;
 }
 
@@ -16,37 +13,117 @@ img {
   max-width: 100%;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
 p {
   line-height: 1.5;
 }
 
 a {
-  color: #e6c3b9;
-  font-family: var(--font-family-secondary);
   text-decoration: none;
   transition: all .2s ease-in-out;
 }
 
-.splash {
-  align-items: center;
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  padding: 1rem;
-  text-align: center;
+// Masthead
+
+.masthead {
+  border-bottom: 1px solid var(--grey);
 }
 
-.logo {
+.masthead-brand {
   margin-bottom: .5rem;
-  width: 128px;
+
+  img {
+    height: 32px;
+    margin-right: .5rem;
+  }
 }
 
-.title {
-  font-size: var(--text-h4);
-  font-weight: 500;
-  letter-spacing: .5em;
-  margin-bottom: 2rem;
-  text-transform: uppercase;
+.masthead-nav {
+  ul > li {
+    margin-right: 1rem;
+  }
+}
+
+// Splash
+
+// Discog
+
+.discog {
+
+}
+
+.discog-grid {
+  flex-wrap: wrap;
+  margin-left: -.5rem;
+  margin-right: -.5rem;
+
+  article {
+    padding: .5rem;
+    width: 50%;
+  }
+}
+
+// Live
+
+.live {
+
+}
+
+.live-list {
+  article {
+    align-items: flex-end;
+    border-bottom: 1px solid var(--grey);
+    justify-content: space-between;
+    padding-bottom: 1rem;
+  }
+}
+
+// Music Service
+
+.music-service-list {
+  li {
+    border-bottom: 1px solid var(--grey-light);
+    padding-bottom: .75rem;
+    padding-top: .75rem;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+
+// Utlility
+
+.btn {
+  background: none;
+  border: 1px solid var(--white);
+  color: inherit;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1.5;
+  padding: .5rem 1rem;
+}
+
+.btn-grey {
+  background-color: var(--grey-light);
+  color: var(--grey-dark);
+}
+
+.btn-rounded {
+  border-radius: 6px;
 }
 
 .list-reset {
@@ -54,35 +131,18 @@ a {
   padding-left: 0;
 }
 
-.nav {
-  li {
-    padding: .5rem;
-  }
+.copy-feedback {
+  background-color: var(--pink);
+  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  transform: translateY(-50%);
 }
 
-@media (min-width: 540px) {
-  .nav {
-    display: flex;
-  
-    li {
-      padding: 0 1rem 0;
-    }
-  }
+.copy-feedback.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
-
-.nav-link {
-  &:hover {
-    opacity: .5;
-  }
-}
-
-.social-link-icon {
-  fill: #fff;
-  height: 1em;
-  margin-right: .25rem;
-  width: 1em;
-}
-
-.d-flex { display: flex; }
-.d-block { display: block; }
-.d-inline-flex { display: inline-flex; }
