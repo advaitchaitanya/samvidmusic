@@ -133,13 +133,13 @@ a {
 
 .copy-feedback {
   background-color: var(--pink);
+  position: fixed;
+  right: 2rem;
+  top: 2rem;
   transform: translate(-50%, -50%);
   transform: translateY(-50%);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  position: fixed;
-  top: 2rem;
-  right: 2rem;
   transform: translateY(-50%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .copy-feedback.is-visible {
