@@ -37,6 +37,14 @@ a {
   border-bottom: 1px solid var(--grey);
 }
 
+@media (min-width: 540px) {
+  .masthead {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .masthead-brand {
   margin-bottom: .5rem;
 
@@ -44,6 +52,12 @@ a {
     display: inline;
     height: 32px;
     margin-right: .5rem;
+  }
+}
+
+@media (min-width: 540px) {
+  .masthead-brand {
+    margin-bottom: 0;
   }
 }
 
